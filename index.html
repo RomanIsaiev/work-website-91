@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>App</title>
+    <title>Життя на повну</title>
     <link
       rel="stylesheet"
       href="node_modules/modern-normalize/modern-normalize.css"
@@ -11,10 +11,1443 @@
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
-    <header class="header"><div class="container"></div></header>
+    <header class="header">
+      <div class="marquee-container">
+        <p class="marquee-text">знижка -90%</p>
+      </div>
+      <div class="container">
+        <div class="wrapper">
+          <p class="text">Онлайн-<span>курс</span></p>
+          <p class="text">
+            старт <br />
+            <span id="dateElement"></span> <span id="monthElement"></span>
+          </p>
+        </div>
+      </div>
+    </header>
     <main>
-      <section></section>
+      <section class="hero">
+        <div class="container">
+          <h1 class="title">Життя на повну</h1>
+          <p class="desc">
+            Як в 40+ скинути зайву вагу та виглядати на 10 років молодше вже за
+            4 тижні
+          </p>
+        </div>
+        <picture
+          ><source
+            srcset="
+              ./src/img/hero/author-2x.png 1x,
+              ./src/img/hero/author-2x.png 2x
+            "
+            width="335"
+            height="286" />
+          <img
+            class="hero-author"
+            src="./src/img/hero/author-1x.png"
+            alt="author"
+            width="335"
+            height="286"
+        /></picture>
+        <div class="container">
+          <ul class="list">
+            <li class="list-item">Позбавлення зайвої ваги</li>
+            <li class="list-item">Відновлення енергії</li>
+            <li class="list-item">Впевненість у собі</li>
+          </ul>
+          <a class="btn-link-container" href="#buy">
+            <p class="btn-link">Приєднатись</p>
+            <div class="btn-star-container">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/hero/star-1x.png 1x,
+                    ./src/img/hero/star-2x.png 2x
+                  "
+                  width="80"
+                  height="80" />
+                <img
+                  class="btn-star-image"
+                  src="./src/img/hero/star-1x.png"
+                  alt="star-sale"
+                  width="80"
+                  height="80"
+              /></picture>
+              <p class="btn-sale-text">
+                знижка <br />
+                <span>-90%</span>
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="bonus">
+        <div class="container">
+          <h2 class="title">
+            Встигніть приєднатись та <span>забрати кращу ціну і бонуси:</span>
+          </h2>
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonus/bonus-01-1x.png 1x,
+                    ./src/img/bonus/bonus-01-2x.png 2x
+                  "
+                  width="120"
+                  height="100" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonus/bonus-01-1x.png"
+                  alt="bonus image"
+                  width="120"
+                  height="100"
+              /></picture>
+              <p class="text">
+                <span>Персональний план</span> схуднення від автора
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonus/bonus-02-1x.png 1x,
+                    ./src/img/bonus/bonus-02-2x.png 2x
+                  "
+                  width="120"
+                  height="100" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonus/bonus-02-1x.png"
+                  alt="bonus image"
+                  width="120"
+                  height="100"
+              /></picture>
+              <p class="text">
+                <span>10 секретних лайфхаків</span> для швидкого схуднення
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonus/bonus-03-1x.png 1x,
+                    ./src/img/bonus/bonus-03-2x.png 2x
+                  "
+                  width="120"
+                  height="100" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonus/bonus-03-1x.png"
+                  alt="bonus image"
+                  width="120"
+                  height="100"
+              /></picture>
+              <p class="text">
+                <span>Гід по домашньому приготуванні</span> здорової їжі
+              </p>
+            </li>
+          </ul>
+          <div id="countdown-one" class="countdown">
+            <div class="countdown-number">
+              <span class="minutes countdown-time"></span>
+              <div class="countdown-label minutes-label"></div>
+            </div>
+            <div><span class="countdown-doubledot">:</span></div>
+            <div class="countdown-number">
+              <span class="seconds countdown-time"></span>
+              <div class="countdown-label seconds-label"></div>
+            </div>
+            <div><span class="countdown-doubledot">:</span></div>
+            <div class="countdown-number">
+              <span class="milliseconds countdown-time"></span>
+              <div class="countdown-label milliseconds-label"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="for-you">
+        <div class="container">
+          <h2 class="title"><span>Цей курс для</span> тебе, якщо:</h2>
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-you/image-01-1x.png 1x,
+                    ./src/img/for-you/image-01-2x.png 2x
+                  "
+                  width="252"
+                  height="auto" />
+                <img
+                  class="for-you-image"
+                  src="./src/img/for-you/image-01-1x.png"
+                  alt="image"
+                  width="252"
+                  height="auto"
+              /></picture>
+              <p class="text orange">
+                Ти втомилась від дієт і постійного підрахунку калорій, але
+                бажаних результатів так і не досягла
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-you/image-02-1x.png 1x,
+                    ./src/img/for-you/image-02-2x.png 2x
+                  "
+                  width="252"
+                  height="auto" />
+                <img
+                  class="for-you-image"
+                  src="./src/img/for-you/image-02-1x.png"
+                  alt="image"
+                  width="252"
+                  height="auto"
+              /></picture>
+              <p class="text green">
+                У тебе немає енергії та натхнення, звичайні речі, як-от підйом
+                сходами, стали випробуванням
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-you/image-03-1x.png 1x,
+                    ./src/img/for-you/image-03-2x.png 2x
+                  "
+                  width="252"
+                  height="auto" />
+                <img
+                  class="for-you-image"
+                  src="./src/img/for-you/image-03-1x.png"
+                  alt="image"
+                  width="252"
+                  height="auto"
+              /></picture>
+              <p class="text orange">
+                Чоловіки давно не роблять тобі компліментів, а улюблені джинси
+                залишаються лише мрією
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-you/image-04-1x.png 1x,
+                    ./src/img/for-you/image-04-2x.png 2x
+                  "
+                  width="252"
+                  height="auto" />
+                <img
+                  class="for-you-image"
+                  src="./src/img/for-you/image-04-1x.png"
+                  alt="image"
+                  width="252"
+                  height="auto"
+              /></picture>
+              <p class="text green">
+                Ти думаєш, що зайва вага — це спадковість, а після 40 схуднути
+                неможливо
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-you/image-05-1x.png 1x,
+                    ./src/img/for-you/image-05-2x.png 2x
+                  "
+                  width="252"
+                  height="auto" />
+                <img
+                  class="for-you-image"
+                  src="./src/img/for-you/image-05-1x.png"
+                  alt="image"
+                  width="252"
+                  height="auto"
+              /></picture>
+              <p class="text orange">
+                Лікарі починають озвучувати діагнози, які змушують задуматися
+                про своє здоров’я
+              </p>
+            </li>
+          </ul>
+          <div class="faster-container">
+            <img
+              class="faster-image"
+              src="./src/img/for-you/faster-img.svg"
+              alt="arrow heart"
+              width="68"
+            />
+            <p class="faster-text">
+              <span>Це найшвидший маршрут від точки А</span> до твого омріяного
+              тіла
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="about-author">
+        <div class="container">
+          <div class="author-wrapper">
+            <picture
+              ><source
+                srcset="
+                  ./src/img/about-author/author-1x.png 1x,
+                  ./src/img/about-author/author-2x.png 2x
+                "
+                width="208"
+                height="auto" />
+              <img
+                class="author-image"
+                src="./src/img/about-author/author-1x.png"
+                alt="image"
+                width="208"
+                height="auto"
+            /></picture>
+            <div class="info-container">
+              <h3 class="name">Оксана Шандровська</h3>
+              <h2 class="title">Про автора</h2>
+              <p class="desc">нутриціолог, експерт BODY DETOX</p>
+            </div>
+          </div>
+          <div class="desc-wrapper">
+            <p class="text">
+              <span
+                >Я маю власний досвід схуднення на 25 кг і точно знаю, як це
+                працює.</span
+              >
+              Мій особистий успіх підкріплений знаннями з нутриціології,
+              дієтології та численними курсами у сфері здоров’я і правильного
+              харчування. Я впевнена, що тимчасові дієти не працюють – вони лише
+              ведуть до зривів і появи зайвих кілограмів та сантиметрів на талії
+            </p>
+            <p class="text">
+              Щоб досягти результату, потрібно змінити щоденні звички. Я покажу
+              тобі, як перейти на здоровий спосіб життя, де схуднення та
+              оздоровлення будуть лише приємним побічним ефектом. Ця система
+              працює для мене і вже допомогла багатьом жінкам.
+              <span>Вона точно спрацює і для тебе!</span>
+            </p>
+          </div>
+          <ul class="vs-list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/about-author/image-01-1x.png 1x,
+                    ./src/img/about-author/image-01-2x.png 2x
+                  "
+                  width="208"
+                  height="auto" />
+                <img
+                  class="author-age-image"
+                  src="./src/img/about-author/image-01-1x.png"
+                  alt="image"
+                  width="208"
+                  height="auto"
+              /></picture>
+              <p class="age">мені 25 років</p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/about-author/image-02-1x.png 1x,
+                    ./src/img/about-author/image-02-2x.png 2x
+                  "
+                  width="208"
+                  height="auto" />
+                <img
+                  class="author-age-image"
+                  src="./src/img/about-author/image-02-1x.png"
+                  alt="image"
+                  width="208"
+                  height="auto"
+              /></picture>
+              <p class="age">я після 35</p>
+            </li>
+          </ul>
+          <p class="short-title">Я проведу тебе найкоротшим шляхом</p>
+          <p class="short-text">
+            ВІД зайвої ваги, втоми та проблем зі здоров’ям ДО стрункого тіла,
+            енергії та впевненості в собі. Бо моя система, це про здоров’я.
+            Особливо для тих, кому за 40. Вже за перший місяць ти скинеш до 5-7
+            кг
+          </p>
+          <p class="short-health">Цей курс це інвестиція в твоє здоров’я!</p>
+        </div>
+      </section>
+      <section class="include">
+        <div class="container">
+          <h2 class="title">Курс складається з</h2>
+          <p class="desc">7-ми уроків тривалістю 10-15 хв</p>
+          <img class="arrow" src="./src/img/include/arrow.svg" alt="arrow" />
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/include/image-01-1x.png 1x,
+                    ./src/img/include/image-01-2x.png 2x
+                  "
+                  width="36"
+                  height="auto" />
+                <img
+                  class="item-image"
+                  src="./src/img/include/image-01-1x.png"
+                  alt="image"
+                  width="36"
+                  height="auto"
+              /></picture>
+              <p class="accent">
+                На КУРСІ ти отримаєш всі необхідні знання про харчування,
+              </p>
+              <p class="text">
+                адже саме від нього залежить 80% результату при схудненні
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/include/image-02-1x.png 1x,
+                    ./src/img/include/image-02-2x.png 2x
+                  "
+                  width="36"
+                  height="auto" />
+                <img
+                  class="item-image"
+                  src="./src/img/include/image-02-1x.png"
+                  alt="image"
+                  width="36"
+                  height="auto"
+              /></picture>
+              <p class="accent">
+                Ти познайомишся з  "правилом тарілки" та знайдеш відповідь
+              </p>
+              <p class="text">
+                на запитання, що, коли, скільки та як їсти, щоб бути стрункою та
+                здоровою
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/include/image-03-1x.png 1x,
+                    ./src/img/include/image-03-2x.png 2x
+                  "
+                  width="36"
+                  height="auto" />
+                <img
+                  class="item-image"
+                  src="./src/img/include/image-03-1x.png"
+                  alt="image"
+                  width="36"
+                  height="auto"
+              /></picture>
+              <p class="accent">Також поговоримо про</p>
+              <p class="text">воду, фізичні навантаження та сон</p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/include/image-04-1x.png 1x,
+                    ./src/img/include/image-04-2x.png 2x
+                  "
+                  width="36"
+                  height="auto" />
+                <img
+                  class="item-image"
+                  src="./src/img/include/image-04-1x.png"
+                  alt="image"
+                  width="36"
+                  height="auto"
+              /></picture>
+              <p class="accent">Окремо розглянемо питання мотивації</p>
+              <p class="text">
+                Ти зрозумієш як не зійти зі шляху до омріяного тіла та хорошого
+                самопочуття
+              </p>
+            </li>
+          </ul>
+          <img
+            class="heart-image"
+            src="./src/img/include/heart-arrow.svg"
+            alt="arrow heart"
+            width="68"
+          />
+          <p class="heart-text">
+            <span>Ніяких пустих обіцянок</span> лише чіткий план до ідеального
+            тіла
+          </p>
+        </div>
+      </section>
+      <section class="program">
+        <div class="container">
+          <h2 class="title">Програма курсу</h2>
+          <div class="program-container">
+            <ul class="program-list list">
+              <li class="program-item">
+                <div class="program-title-container">
+                  <p class="program-item-title">1. Ставимо цілі</p>
+                  <div class="program-item-svg"></div>
+                </div>
+                <div class="program-answer-container">
+                  <div class="program-wrapper">
+                    <ul class="answer-list">
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Знаходимо бажану кінцеву ціль. Ділимо її на маленькі
+                          частинки. Визначаємо ціль на перший місяць
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Як правильно робити заміри, фото і чому це важливо
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Ти дізнаєшся, який показник розповість тобі найбільше
+                          про стан твого тіла та здоровʼя
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="program-item">
+                <div class="program-title-container">
+                  <p class="program-item-title">2. Основи харчування</p>
+                  <div class="program-item-svg"></div>
+                </div>
+                <div class="program-answer-container">
+                  <div class="program-wrapper">
+                    <ul class="answer-list">
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          На цьому уроці ти отримаєш основні знання з
+                          нутриціології. На зрозумілій мові розповім, що таке
+                          білки, жири та вуглеводи
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Ти дізнаєшся чому не потрібно зважувати їжу та
+                          рахувати калорії
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Також зрозумієш як працює твій організм та чим саме
+                          наповнювати свою тарілку, як визначити розмір порції
+                          без зважування
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="program-item">
+                <div class="program-title-container">
+                  <p class="program-item-title">3. Емоційний голод</p>
+                  <div class="program-item-svg"></div>
+                </div>
+                <div class="program-answer-container">
+                  <div class="program-wrapper">
+                    <ul class="answer-list">
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          На уроці ти навчишся відрізняти емоційний голод від
+                          справжнього
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Ти нарешті перестанеш заїдати емоції та злізеш з
+                          солодкої голки
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Сформуєш свій комфортний режим харчування протягом дня
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="program-item">
+                <div class="program-title-container">
+                  <p class="program-item-title">4. Вода</p>
+                  <div class="program-item-svg"></div>
+                </div>
+                <div class="program-answer-container">
+                  <div class="program-wrapper">
+                    <ul class="answer-list">
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Чому вода така важлива для твого організму
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Як навчитися пити чисту воду
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Яка вода корисна для здоровʼя?
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Скільки та коли потрібно пити води протягом дня
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="program-item">
+                <div class="program-title-container">
+                  <p class="program-item-title">5. Фізична активність</p>
+                  <div class="program-item-svg"></div>
+                </div>
+                <div class="program-answer-container">
+                  <div class="program-wrapper">
+                    <ul class="answer-list">
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Чому фізичні навантаження важливі не тільки для
+                          схуднення, але і для здоровʼя загалом
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Як обрати спорт під себе та як зробити активність
+                          своїм щоденним ритуалом
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Ранкова зарядка - яка і для чого
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="program-item">
+                <div class="program-title-container">
+                  <p class="program-item-title">6. Сон та режим дня</p>
+                  <div class="program-item-svg"></div>
+                </div>
+                <div class="program-answer-container">
+                  <div class="program-wrapper">
+                    <ul class="answer-list">
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Чому режим сну відіграє важливу роль для здоров’я та
+                          як сон допомагає схуднути
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">Коли потрібно лягати спати</p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">Як налагодити режим сну</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="program-item">
+                <div class="program-title-container">
+                  <p class="program-item-title">7. Дисципліна і мотивація</p>
+                  <div class="program-item-svg"></div>
+                </div>
+                <div class="program-answer-container">
+                  <div class="program-wrapper">
+                    <ul class="answer-list">
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Визначиш що саме тебе мотивує
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Як зробити вдома атмосферу здоров’я та чим полегшити
+                          твій шлях до схуднення
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Як не злитися через кілька днів і дійти до результату
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Вплив оточення на твої результати
+                        </p>
+                      </li>
+                      <li class="answer-item">
+                        <span class="item-dot">/</span>
+                        <p class="program-answer">
+                          Психологічні аспекти та як внести зміни в життя
+                          безболісно
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="bonus" id="buy">
+        <div class="container">
+          <div class="price-container">
+            <p class="price"><span>2490 грн</span> 249 грн</p>
+          </div>
+          <div class="form">
+            <script
+              type="module"
+              src="https://kwiga.com/build/js/kwiga-widget.js?t=1738157930000&uuid=34513f87-bc2e-4483-918e-ff8f886fd290&producer=https://kwiga.com/"
+            ></script>
+          </div>
+          <!-- <a class="btn-link-container" href="" target="_blank" rel="nofollow">
+            <p class="btn-link">Приєднатись</p>
+            <div class="btn-star-container">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/hero/star-1x.png 1x,
+                    ./src/img/hero/star-2x.png 2x
+                  "
+                  width="80"
+                  height="80" />
+                <img
+                  class="btn-star-image"
+                  src="./src/img/hero/star-1x.png"
+                  alt="star-sale"
+                  width="80"
+                  height="80"
+              /></picture>
+              <p class="btn-sale-text">
+                знижка <br />
+                <span>-90%</span>
+              </p>
+            </div>
+          </a> -->
+          <p class="garant-text">
+            100% повернення коштів протягом 14 днів, якщо курс тобі не підійде
+          </p>
+          <h2 class="title">
+            Встигніть приєднатись та <span>забрати кращу ціну і бонуси:</span>
+          </h2>
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonus/bonus-01-1x.png 1x,
+                    ./src/img/bonus/bonus-01-2x.png 2x
+                  "
+                  width="120"
+                  height="100" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonus/bonus-01-1x.png"
+                  alt="bonus image"
+                  width="120"
+                  height="100"
+              /></picture>
+              <p class="text">
+                <span>Персональний план</span> схуднення від автора
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonus/bonus-02-1x.png 1x,
+                    ./src/img/bonus/bonus-02-2x.png 2x
+                  "
+                  width="120"
+                  height="100" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonus/bonus-02-1x.png"
+                  alt="bonus image"
+                  width="120"
+                  height="100"
+              /></picture>
+              <p class="text">
+                <span>10 секретних лайфхаків</span> для швидкого схуднення
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonus/bonus-03-1x.png 1x,
+                    ./src/img/bonus/bonus-03-2x.png 2x
+                  "
+                  width="120"
+                  height="100" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonus/bonus-03-1x.png"
+                  alt="bonus image"
+                  width="120"
+                  height="100"
+              /></picture>
+              <p class="text">
+                <span>Гід по домашньому приготуванні</span> здорової їжі
+              </p>
+            </li>
+          </ul>
+          <div id="countdown-two" class="countdown">
+            <div class="countdown-number">
+              <span class="minutes countdown-time"></span>
+              <div class="countdown-label minutes-label"></div>
+            </div>
+            <div><span class="countdown-doubledot">:</span></div>
+            <div class="countdown-number">
+              <span class="seconds countdown-time"></span>
+              <div class="countdown-label seconds-label"></div>
+            </div>
+            <div><span class="countdown-doubledot">:</span></div>
+            <div class="countdown-number">
+              <span class="milliseconds countdown-time"></span>
+              <div class="countdown-label milliseconds-label"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="how-study">
+        <div class="container">
+          <h2 class="title">Як відбувається <span>навчання</span></h2>
+          <div class="wrapper">
+            <img
+              class="arrow-1"
+              src="./src/img/how-study/arrow.svg"
+              alt="arrow"
+            />
+            <img
+              class="arrow-2"
+              src="./src/img/how-study/arrow.svg"
+              alt="arrow"
+            />
+            <img
+              class="arrow-3"
+              src="./src/img/how-study/arrow.svg"
+              alt="arrow"
+            />
+            <ul class="list">
+              <li class="list-item">
+                <span class="item-number">1</span>
+                <p class="item-text">
+                  Після оплати тобі відразу приходить посилання на електронну
+                  пошту. (Перевір вхідні листи)
+                </p>
+              </li>
+              <li class="list-item">
+                <span class="item-number">2</span>
+                <p class="item-text">
+                  Всі уроки в записі, тому можеш переглядати в зручний час
+                </p>
+              </li>
+              <li class="list-item">
+                <span class="item-number">3</span>
+                <p class="item-text">
+                  Доступ до курсу 2 місяці для закріплення нових звичок
+                </p>
+              </li>
+              <li class="list-item">
+                <span class="item-number">4</span>
+                <p class="item-text">
+                  Також в листі буде посилання на групу з експертом в Тelegram -
+                  приєднуйся до спільноти людей з однаковими цілями
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="for-run">
+        <div class="container">
+          <h2 class="title">
+            Для проходження курсу <span>тобі потрібно:</span>
+          </h2>
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-run/image-01-1x.png 1x,
+                    ./src/img/for-run/image-01-2x.png 2x
+                  "
+                  width="122"
+                  height="115" />
+                <img
+                  class="item-image"
+                  src="./src/img/for-run/image-01-1x.png"
+                  alt="image"
+                  width="122"
+                  height="115"
+              /></picture>
+              <p class="text">Вимірювальна стрічка для замірів</p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-run/image-02-1x.png 1x,
+                    ./src/img/for-run/image-02-2x.png 2x
+                  "
+                  width="118"
+                  height="111" />
+                <img
+                  class="item-image"
+                  src="./src/img/for-run/image-02-1x.png"
+                  alt="image"
+                  width="118"
+                  height="111"
+              /></picture>
+              <p class="text">Ваги (перевір справність батарейок)</p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-run/image-03-1x.png 1x,
+                    ./src/img/for-run/image-03-2x.png 2x
+                  "
+                  width="166"
+                  height="155" />
+                <img
+                  class="item-image"
+                  src="./src/img/for-run/image-03-1x.png"
+                  alt="image"
+                  width="166"
+                  height="155"
+              /></picture>
+              <p class="text">Пляшка для води</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="results">
+        <div class="container">
+          <h2 class="title">Результати після навчання</h2>
+          <ul class="list">
+            <li class="list-item">
+              <span class="item-number">01</span>
+              <p class="text">Отримаєш тонус шкіри та кращий стан волосся</p>
+            </li>
+            <li class="list-item">
+              <span class="item-number">02</span>
+              <p class="text">
+                Перестанеш заїдати емоції. Навчишся вгамовувати емоційний голод
+              </p>
+            </li>
+            <li class="list-item">
+              <span class="item-number">03</span>
+              <p class="text">
+                Не будеш переїдати. Комфортне самопочуття до та після їжі
+              </p>
+            </li>
+            <li class="list-item">
+              <span class="item-number">04</span>
+              <p class="text">
+                Позбавишся харчових залежностей, в тому числі “злізеш з солодкої
+                голки”
+              </p>
+            </li>
+            <li class="list-item">
+              <span class="item-number">05</span>
+              <p class="text">
+                Збільшення життєвої енергії та хороший настрій, як наслідок
+                переходу на здорове харчування
+              </p>
+            </li>
+            <li class="list-item">
+              <span class="item-number">06</span>
+              <p class="text">
+                Мінус на вагах та зменшення об’ємів тіла. Ти нарешті влізеш в
+                улюблені джинси
+              </p>
+            </li>
+            <li class="list-item">
+              <span class="item-number">07</span>
+              <p class="text">
+                Отримаєш купу компліментів від чоловіків та жінок
+              </p>
+            </li>
+            <li class="list-item">
+              <span class="item-number">08</span>
+              <p class="text">Твоя самооцінка зросте, ти станеш впевненою</p>
+            </li>
+            <li class="list-item">
+              <span class="item-number">09</span>
+              <p class="text">
+                Ти нарешті почнеш проживати своє ЖИТТЯ НА ПОВНУ!
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="price-archor">
+        <div class="container">
+          <div class="price-container">
+            <p class="price"><span>2490 грн</span> 249 грн</p>
+          </div>
+          <a class="btn-link-container" href="#buy">
+            <p class="btn-link">Приєднатись</p>
+            <div class="btn-star-container">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/hero/star-1x.png 1x,
+                    ./src/img/hero/star-2x.png 2x
+                  "
+                  width="80"
+                  height="80" />
+                <img
+                  class="btn-star-image"
+                  src="./src/img/hero/star-1x.png"
+                  alt="star-sale"
+                  width="80"
+                  height="80"
+              /></picture>
+              <p class="btn-sale-text">
+                знижка <br />
+                <span>-90%</span>
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <div class="title-container">
+            <h2 class="title">Відгуки роботи <span>зі мною:</span></h2>
+            <div class="move-container">
+              <img src="./src/img/move-hand.svg" alt="move hand" width="21" />
+              <p class="move-text">гортай, щоб побачити більше</p>
+            </div>
+          </div>
+          <div class="swiper mySwiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-01-1x.png 1x,
+                      ./src/img/reviews/review-01-2x.png 2x
+                    "
+                    width="320"
+                    height="auto" />
+                  <img
+                    class="review-image"
+                    src="./src/img/reviews/review-01-1x.png"
+                    alt="review"
+                    width="320"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-02-1x.png 1x,
+                      ./src/img/reviews/review-02-2x.png 2x
+                    "
+                    width="320"
+                    height="auto" />
+                  <img
+                    class="review-image"
+                    src="./src/img/reviews/review-02-1x.png"
+                    alt="review"
+                    width="320"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-03-1x.png 1x,
+                      ./src/img/reviews/review-03-2x.png 2x
+                    "
+                    width="320"
+                    height="auto" />
+                  <img
+                    class="review-image"
+                    src="./src/img/reviews/review-03-1x.png"
+                    alt="review"
+                    width="320"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-04-1x.png 1x,
+                      ./src/img/reviews/review-04-2x.png 2x
+                    "
+                    width="320"
+                    height="auto" />
+                  <img
+                    class="review-image"
+                    src="./src/img/reviews/review-04-1x.png"
+                    alt="review"
+                    width="320"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-05-1x.png 1x,
+                      ./src/img/reviews/review-05-2x.png 2x
+                    "
+                    width="320"
+                    height="auto" />
+                  <img
+                    class="review-image"
+                    src="./src/img/reviews/review-05-1x.png"
+                    alt="review"
+                    width="320"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-06-1x.png 1x,
+                      ./src/img/reviews/review-06-2x.png 2x
+                    "
+                    width="320"
+                    height="auto" />
+                  <img
+                    class="review-image"
+                    src="./src/img/reviews/review-06-1x.png"
+                    alt="review"
+                    width="320"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-07-1x.png 1x,
+                      ./src/img/reviews/review-07-2x.png 2x
+                    "
+                    width="320"
+                    height="auto" />
+                  <img
+                    class="review-image"
+                    src="./src/img/reviews/review-07-1x.png"
+                    alt="review"
+                    width="320"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-08-1x.png 1x,
+                      ./src/img/reviews/review-08-2x.png 2x
+                    "
+                    width="320"
+                    height="auto" />
+                  <img
+                    class="review-image"
+                    src="./src/img/reviews/review-08-1x.png"
+                    alt="review"
+                    width="320"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-09-1x.png 1x,
+                      ./src/img/reviews/review-09-2x.png 2x
+                    "
+                    width="320"
+                    height="auto" />
+                  <img
+                    class="review-image"
+                    src="./src/img/reviews/review-09-1x.png"
+                    alt="review"
+                    width="320"
+                    height="auto"
+                /></picture>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section class="questions">
+        <div class="container">
+          <h2 class="title">
+            Відповіді <br />
+            <span>на запитання</span>
+          </h2>
+          <div class="questions-container">
+            <ul class="questions-list list">
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <p class="questions-item-title">
+                    Чи потрібно обмежувати себе в їжі?
+                  </p>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      Обмежити потрібно тільки продукти, які шкодять твоєму. 
+                      здоровʼю. Ми замінимо їх на смачні та корисні.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <p class="questions-item-title">
+                    Боюся не наїдатися і ходити голодною
+                  </p>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      Ти точно не будеш голодною. Ти навчишся наповнювати свою
+                      тарілку так, що не будеш відчувати голоду 3-4 години до
+                      наступного прийому їжі. 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <p class="questions-item-title">
+                    Якщо я не можу відмовитися від солодкого чи зможу я
+                    схуднути?
+                  </p>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      Задача програми відновити твої смакові рецептори (щоб
+                      морква була солодкою, а в торті ти відчувала смак 
+                      маргарину, цукру та яєць). Ти зможеш позбутися залежності
+                      від солодощів, якщо будеш притримуватися моїх
+                      рекомендацій. Ми відновимо смакові рецептори до
+                      "заводських установок" і як наслідок ти перестанеш хотіти
+                      солодощів. Тому ця проблема просто перестане для тебе
+                      існувати.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <p class="questions-item-title">
+                    А якщо я на "ВИ" зі спортом? 
+                  </p>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      Я скинула 25 кг без спорту. І шкіра підтягнулася сама. Для
+                      схуднення потрібна щоденна фізична активність, а не 2-3 в
+                      тиждень вмирати в спортивному залі чи на фітнесі. 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <p class="questions-item-title">
+                    Скільки часу і коштів потрібно для приготування їжі?
+                  </p>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      Якщо ти будеш дотримуватися рекомендацій з курсу то
+                      зекономиш час і гроші на приготування їжі. Для цього є
+                      приклад тижневого меню.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <p class="questions-item-title">
+                    Я втомилась рахувати калорії - чи можна без цього?
+                  </p>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      Не просто можна, а навіть треба! Обʼєм порції закладений у
+                      твоїй долоні і я навчу тебе цим користуватись. А замість
+                      рахування калорій ти будеш відслідковувати почуття голоду,
+                      але це лише перші кілька тижнів. Далі виробиться звичка
+                      скільки якої їжі тобі потрібно і це буде відбуватися на
+                      автоматі.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <p class="questions-item-title">
+                    Якщо моя зайва вага передалася мені генетично від мами? Я не
+                    вірю, що зможу схуднути.
+                  </p>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      Генетика передає нам тільки схильність до зайвої ваги. Чи
+                      будеш ти товстою і хворою залежить від твого способу
+                      життя. Курс допоможе схуднути не залежно від генетики.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <p class="questions-item-title">
+                    Чи зможу я схуднути, якщо у мене є проблеми з гормонами?
+                  </p>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      Якщо у тебе є будь які хвороби, підтверджені лікарським
+                      діагнозом, то тобі не сюди, а до лікуючого лікаря. Курс
+                      допоможе перейти тобі на здоровий спосіб життя, що
+                      однозначно покращить твоє самопочуття. Але якщо ти щодня
+                      приймаєш жменю таблеток то ніхто не може гарантувати
+                      схуднення.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer"><div class="container"></div></footer>
+    <footer class="footer">
+      <div class="container">
+        <a
+          class="author-link"
+          href="https://www.instagram.com/shandrovskaoxana"
+          target="_blank"
+          rel="nofollow"
+          ><img
+            src="./src/img/color-insta.svg"
+            alt=""
+            width="16"
+          />@shandrovskaoxana</a
+        >
+        <div class="fop-box">
+          <p class="name">ФОП Юрчишин Людмила</p>
+          <p class="code">іпн 2777805627</p>
+        </div>
+        <a
+          class="mail-container"
+          href="mailto:key2body@gmail.com"
+          rel="nofollow"
+          target="_blank"
+          >key2body@gmail.com</a
+        >
+        <div class="deals-box">
+          <a
+            href="https://key2body.minisite.ai/document"
+            target="_blank"
+            rel="nofollow"
+            class="deals-link public"
+            >публічна оферта
+          </a>
+          <a
+            href="https://key2body.minisite.ai/conf"
+            target="_blank"
+            rel="nofollow"
+            class="deals-link confidence"
+            >політика конфідеційності</a
+          >
+        </div>
+        <a
+          class="dising-creator"
+          href="https://www.instagram.com/lllcku"
+          target="_blank"
+          rel="nofollow"
+          ><img src="./src/img/insta.svg" alt="insta" height="25" width="25" />
+          <p>
+            розробка сайту <br />
+            <span>lisa bardadym</span>
+          </p></a
+        >
+      </div>
+    </footer>
+    <script type="module" src="./src/js/timer.js"></script>
+    <script type="module" src="./src/js/changeDate.js"></script>
+    <script type="module" src="./src/js/program.js"></script>
+    <script type="module" src="./src/js/questions.js"></script>
+    <script type="module" src="./src/js/marquee.js"></script>
+    <script type="module" src="./src/js/swiper.js"></script>
   </body>
 </html>

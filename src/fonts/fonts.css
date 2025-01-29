@@ -13,13 +13,13 @@
 @font-face {
   font-family: 'Futura PT';
   src: url(../fonts/FUTURAPT-MEDIUM.TTF);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @font-face {
   font-family: 'Futura PT';
   src: url(../fonts/FUTURAPT-DEMI.TTF);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @font-face {
@@ -38,4 +38,10 @@
   font-family: 'Futura PT';
   src: url(../fonts/FUTURAPT-HEAVY.TTF);
   font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Cyrillic';
+  src: url(../fonts/Bebas_Neue_Cyrillic.ttf);
+  font-weight: 400;
 }
