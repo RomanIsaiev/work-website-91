@@ -36,16 +36,16 @@ function initializeClock(id, endtime) {
     millisecondsSpan.innerHTML = ('0' + t.milliseconds).slice(-2);
 
     minutesLabel.innerHTML = declensionNum(t.minutes, [
-      'минута',
-      'минуты',
-      'минут',
+      'хвилина',
+      'хвилини',
+      'хвилин',
     ]);
     secondsLabel.innerHTML = declensionNum(t.seconds, [
       'секунда',
-      'секунды',
+      'секунди',
       'секунд',
     ]);
-    millisecondsLabel.innerHTML = 'милисекунд';
+    millisecondsLabel.innerHTML = 'мілісекунд';
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
